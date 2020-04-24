@@ -1,0 +1,122 @@
+$color-skyblue: #46dbcf;
+
+.fixed-top {
+  border-bottom: 3px solid #a71d1d;
+}
+
+nav.navbar {
+  position: initial;
+  height: 80px;
+
+  a.navbar-brand {
+    color: $color-skyblue;
+    font-size: 2rem;
+
+    span {
+      color: #666666;
+    }
+  }
+
+  button.navbar-toggler {
+    background: $color-skyblue;
+    color: #ffffff;
+    padding: 0.35rem 1rem;
+  }
+
+  ul.navbar-nav {
+    .nav-item {
+      a.nav-link {
+        color: #000000;
+        font-weight: bold;
+
+        &:hover {
+          color: $color-skyblue;
+        }
+      }
+      &.active a.nav-link {
+        color: $color-skyblue;
+      }
+
+      // Dropdown
+      &.dropdown {
+        // Button Dropdown Language
+        a.dropdown-toggle {
+          cursor: pointer;
+          color: #000000;
+          background: #e7e7e7;
+          border-radius: 0.25rem;
+          padding: 0.25rem 0.5rem;
+          font-weight: normal;
+        }
+        // Dropdown Menu
+        .dropdown-menu {
+          min-width: 110px;
+          padding: 0.3rem;
+          border-radius: 7px;
+
+          .dropdown-item {
+            cursor: pointer;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 7px;
+
+            &:hover {
+              background: #eeeeee;
+            }
+
+            &:active {
+              background: $color-skyblue;
+            }
+          }
+        }
+      }
+    }
+
+    &.navbar-right {
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  nav.navbar .navbar-collapse {
+    position: absolute;
+    top: 83px;
+    left: 0;
+    background: #707070;
+    width: 100%;
+
+    ul.navbar-nav {
+      .nav-item {
+        padding: 0 1rem;
+        border-bottom: 1px solid #000000;
+
+        a.nav-link {
+          color: #ffffff;
+
+          &:hover {
+            color: $color-skyblue;
+          }
+        }
+
+        &.active {
+          background-color: $color-skyblue;
+          a.nav-link {
+            color: #666666;
+          }
+        }
+
+        // Dropdown
+        &.dropdown {
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+
+      &.navbar-right {
+        align-items: unset;
+        justify-content: start;
+      }
+    }
+  }
+}
